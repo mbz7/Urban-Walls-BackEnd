@@ -32,12 +32,12 @@ class ApplicationController < Sinatra::Base
   # Updates
   patch "/post/:id" do
     post = Post.find(params[:id])
-    message.update(
-      photo_url: params[:photo_url],
-      location: params[:location],
-      artist: params[:artist],
-      post_date: params[:post_date],
-      lkes: params[:lkes])
+    post.update(
+      # photo_url: params[:photo_url],
+      # location: params[:location],
+      # artist: params[:artist],
+      # post_date: params[:post_date],
+      likes: params[:likes])
       post.to_json
   end
 
