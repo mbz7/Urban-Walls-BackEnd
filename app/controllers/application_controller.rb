@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
       location: params[:location],
       artist: params[:artist],
       post_date: params[:post_date],
-      likes: params[:lkes],
+      likes:0,
       user_id: params[:user_id],
       comment_id: params[:comment_id])
       post.to_json
