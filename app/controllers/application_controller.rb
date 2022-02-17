@@ -1,4 +1,4 @@
-class ApplicationController < Sinatra::Base
+    class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
@@ -28,6 +28,11 @@ class ApplicationController < Sinatra::Base
       comment_id: params[:comment_id])
       post.to_json
   end
+   post "/user" do
+      user = User.create(
+        user_name: params[:user_name])
+      user.to_json
+    end
 
   # Updates
   patch "/post/:id" do
