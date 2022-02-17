@@ -38,7 +38,7 @@ class ApplicationController < Sinatra::Base
       # artist: params[:artist],
       # post_date: params[:post_date],
       likes: params[:likes])
-      post.to_json
+      post.to_json(include: :user)
   end
 
   # delete requests
