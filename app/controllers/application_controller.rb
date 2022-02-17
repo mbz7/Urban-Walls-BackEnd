@@ -7,7 +7,7 @@ class ApplicationController < Sinatra::Base
   get "/post" do
     # get all post
     all_post = Post.all.order(:id).reverse
-    all_post.to_json
+    all_post.to_json(include: :user)
   end
 
   get "/post/:id" do
